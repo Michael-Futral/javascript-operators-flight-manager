@@ -1,13 +1,16 @@
-const { supportsEsModules } = require("mocha/lib/utils");
+// const { supportsEsModules } = require("mocha/lib/utils");
 
 function Flights() {
 
-    function calculateNumberOfFlights(Passengers, Capacity) {
-        let flights = (Passengers / Capacity);
+    function calculateNumberOfFlights(passengers, capacity) {
+        let flights = Passengers / Capacity;
+        console.log(flights);
         return flights;
-    }
+    };
 
-}
+    return { calculateNumberOfFlights }
+
+};
 
 module.exports = Flights();
 
